@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./InteractiveEye.css";
 import { useNavigate } from "react-router-dom";
+import "./Substyles/InteractiveEye.css";
 
 function InteractiveEye() {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ function InteractiveEye() {
   return (
     <div className="page-container">
       <button onClick={() => navigate("/star/senses")} className="back-btn">
-        Back
+        Go Back
       </button>
       <div className="eye-container" onMouseMove={handleMouseMove}>
         <div className="eyes">

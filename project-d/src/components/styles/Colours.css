@@ -1,8 +1,43 @@
-.clrs__cont {
-  background: #f1eb90;
-  margin: 0;
-  height: 100vh;
+.color-reviewer-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;  /* Centers horizontally */
+  justify-content: center;  /* Centers vertically */
+  min-height: 100vh;  /* Takes full viewport height */
+  text-align: center;  /* Centers text inside elements */
+  background-color: #f1eb90;  /* Optional: Light background for better contrast */
+  color: #9fbb73;
+}
+
+.color-section {
+  margin: 20px 0;  /* Space between sections */
+  width: 80%;  /* Makes the sections take 80% of the container's width */
+  max-width: 600px;  /* Optional: Set a max width for the sections */
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centers the color boxes */
+  gap: 20px;  /* Space between color boxes */
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #ffffff;  /* White text for better readability */
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* Optional: Adds shadow effect to boxes */
+}
+
+.color-info {
+  text-align: center;  /* Centers text inside the box */
+}
+
+.color-name, .color-hex {
+  margin: 0;  /* Removes default margins */
 }

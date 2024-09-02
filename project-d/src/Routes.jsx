@@ -16,8 +16,12 @@ import HeartPage from "./Pages/HeartPage";
 import Planets from "./Pages/Planets";
 //
 import PageNotFound from "./Pages/PageNotFound";
-//Subpages
+// Subpages
 import InteractiveEye from "./SubPages/InteractiveEye";
+import InteractiveTouch from "./SubPages/InteractiveTouch";
+import InteractiveSmell from "./SubPages/InteractiveSmell";
+import InteractiveTaste from "./SubPages/InteractiveTaste";
+import InteractiveEar from "./SubPages/InteractiveEar";
 
 const AppRoutes = () => {
   return (
@@ -26,25 +30,25 @@ const AppRoutes = () => {
 
       <Route path="/star" element={<StarPage />}>
         <Route path="/star/senses" element={<Senses />} />
-        <Route
-          path="/star/senses/interactiveeye"
-          element={<InteractiveEye />}
-        />
         <Route path="/star/colours" element={<Colours />} />
         <Route path="/star/shapes" element={<Shapes />} />
       </Route>
-
       <Route path="/diamond" element={<DiamondPage />}>
         <Route path="/diamond/animals" element={<Animals />} />
         <Route path="/diamond/place" element={<Place />} />
         <Route path="/diamond/objects" element={<Objects />} />
       </Route>
-
       <Route path="/heart" element={<HeartPage />}>
         <Route path="/heart/planets" element={<Planets />} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
+      {/* NoNavBar */}
+      <Route path="/intereye" element={<InteractiveEye />} />
+      <Route path="/intertouch" element={<InteractiveTouch />} />
+      <Route path="/intersmell" element={<InteractiveSmell />} />
+      <Route path="/intertaste" element={<InteractiveTaste />} />
+      <Route path="/interhear" element={<InteractiveEar />} />
     </Routes>
   );
 };
