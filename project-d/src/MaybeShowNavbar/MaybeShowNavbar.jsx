@@ -32,6 +32,9 @@ const MaybeShowNavbar = ({ children }) => {
       "/intersmell", // Added intersmell path
       "/intertaste", // Added intertaste path
       "/interhear", // Added interhear path
+      "/ColorGuessingGame", // Added ColorGuessingGame path
+      "/ColorGuess", // Added ColorGuess path
+      "/ColorCard", // Added ColorCard path
     ];
 
     // Check if the current path is in the noNavbarPaths array

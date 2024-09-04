@@ -1,27 +1,31 @@
 import { Route, Routes } from "react-router-dom";
 //
-import HomePage from "./Pages/HomePage";
+import HomePage from "./MainPages/HomePage";
 //
-import StarPage from "./Pages/StarPage";
-import Senses from "./Pages/Senses";
-import Colours from "./Pages/Colours";
-import Shapes from "./Pages/Shapes";
+import StarPage from "./MainPages/StarPage";
+import Senses from "./MainPages/Senses";
+import Colours from "./MainPages/Colours";
+import Shapes from "./MainPages/Shapes";
 //
-import DiamondPage from "./Pages/DiamondPage";
-import Animals from "./Pages/Animals";
-import Place from "./Pages/Place";
-import Objects from "./Pages/Objects";
+import DiamondPage from "./MainPages/DiamondPage";
+import Animals from "./MainPages/Animals";
+import Place from "./MainPages/Place";
+import Objects from "./MainPages/Objects";
 //
-import HeartPage from "./Pages/HeartPage";
-import Planets from "./Pages/Planets";
+import HeartPage from "./MainPages/HeartPage";
+import Planets from "./MainPages/Planets";
 //
-import PageNotFound from "./Pages/PageNotFound";
+import PageNotFound from "./MainPages/PageNotFound";
 // Subpages
 import InteractiveEye from "./SubPages/InteractiveEye";
 import InteractiveTouch from "./SubPages/InteractiveTouch";
 import InteractiveSmell from "./SubPages/InteractiveSmell";
 import InteractiveTaste from "./SubPages/InteractiveTaste";
 import InteractiveEar from "./SubPages/InteractiveEar";
+//Games
+import ColorGuessingGame from "./ColorGames/ColorGuessingGame";
+import ColorGuess from "./ColorGames/ColorGuess";
+import ColorCard from "./ColorGames/ColorCard";
 
 const AppRoutes = () => {
   return (
@@ -43,12 +47,16 @@ const AppRoutes = () => {
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
-      {/* NoNavBar */}
+      {/* NoNavBar, Games */}
       <Route path="/intereye" element={<InteractiveEye />} />
       <Route path="/intertouch" element={<InteractiveTouch />} />
       <Route path="/intersmell" element={<InteractiveSmell />} />
       <Route path="/intertaste" element={<InteractiveTaste />} />
       <Route path="/interhear" element={<InteractiveEar />} />
+      <Route path="/ColorGuessingGame" element={<ColorGuessingGame />} />
+      <Route path="/ColorGuess" element={<ColorGuess />} />
+      <Route path="/ColorCard" element={<ColorCard />} />
+
     </Routes>
   );
 };

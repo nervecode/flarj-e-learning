@@ -1,43 +1,123 @@
 .color-reviewer-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Centers horizontally */
-  justify-content: center;  /* Centers vertically */
-  min-height: 100vh;  /* Takes full viewport height */
-  text-align: center;  /* Centers text inside elements */
-  background-color: #f1eb90;  /* Optional: Light background for better contrast */
-  color: #9fbb73;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f1eb90;
+}
+
+.color-rev-h1 {
+  color: #0f3f46;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0f3f46;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.challenge-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0f3f46;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.options-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #0f3f46;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.options-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-container li {
+  margin-bottom: 10px;
+}
+
+.options-container a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.options-container a:hover {
+  text-decoration: underline;
+}
+
+.color-sections-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
 .color-section {
-  margin: 20px 0;  /* Space between sections */
-  width: 80%;  /* Makes the sections take 80% of the container's width */
-  max-width: 600px;  /* Optional: Set a max width for the sections */
+  flex: 1;
+  max-width: 30%;
+  margin: 20px 0;
+}
+
+.color-section h2 {
+  color: #0f3f46;
 }
 
 .color-palette {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Centers the color boxes */
-  gap: 20px;  /* Space between color boxes */
+  justify-content: center;
+  gap: 10px;
 }
 
 .color-box {
   width: 100px;
   height: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: #ffffff;  /* White text for better readability */
-  margin: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* Optional: Adds shadow effect to boxes */
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .color-info {
-  text-align: center;  /* Centers text inside the box */
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0f3f46;
 }
 
-.color-name, .color-hex {
-  margin: 0;  /* Removes default margins */
+.color-name,
+.color-hex {
+  margin: 0;
 }
