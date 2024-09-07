@@ -26,6 +26,7 @@ import InteractiveEar from "./SubPages/InteractiveEar";
 import ColorGuessingGame from "./ColorGames/ColorGuessingGame";
 import ColorGuess from "./ColorGames/ColorGuess";
 import ColorCard from "./ColorGames/ColorCard";
+import TouchPaint from "./ColorGames/TouchPaint";
 
 const AppRoutes = () => {
   return (
@@ -56,6 +57,7 @@ const AppRoutes = () => {
       <Route path="/ColorGuessingGame" element={<ColorGuessingGame />} />
       <Route path="/ColorGuess" element={<ColorGuess />} />
       <Route path="/ColorCard" element={<ColorCard />} />
+      <Route path="/TouchPaint" element={<TouchPaint />} />
 
     </Routes>
   );

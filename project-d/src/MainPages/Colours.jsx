@@ -48,6 +48,7 @@ function ColorReviewer() {
 
   return (
     <div className="color-reviewer-container">
+      <button onClick={() => navigate("/TouchPaint")}>TouchPaint</button>
       <button className="toggle-btn" onClick={toggleColorCodes}>
         {showColorCodes ? "Hide Color Codes" : "Show Color Codes"}
       </button>

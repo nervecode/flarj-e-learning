@@ -1,0 +1,52 @@
+/* src/styles/AnimalStyles.css */
+
+.animals-container {
+  height: 100vh;
+  text-align: center;
+  padding: 50px;
+  background: #f1eb90;
+  h1 {
+    color: #0f3f46;
+  }
+}
+
+.animal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.animal-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 50px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  p {
+    color: #0f3f46;
+  }
+}
+
+.animal-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

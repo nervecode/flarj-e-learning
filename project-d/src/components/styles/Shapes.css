@@ -1,8 +1,12 @@
-.shps__cont {
-  background: #f1eb90;
-  margin: 0;
-  height: 100vh;
+.app-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1eb90;
+  min-height: 100vh;
+}
+
+.game-area {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
