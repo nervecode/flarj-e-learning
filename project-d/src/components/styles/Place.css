@@ -1,0 +1,39 @@
+.place__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 80%;
+  gap: 20px;
+}
+
+.carousel__item {
+  flex-shrink: 0;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel__item:hover {
+  transform: scale(1.1);
+}
+
+.carousel__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
