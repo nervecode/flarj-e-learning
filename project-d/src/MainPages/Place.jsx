@@ -1,33 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import birdChirp from "../assets/sounds/bird-chirp.mp3";
 import doorbell from "../assets/sounds/doorbell.mp3";
 import schoolBell from "../assets/sounds/school-bell.mp3";
 import cashRegister from "../assets/sounds/cash-register.wav";
+import "../components/styles/Place.css";
 
-// Data for the sounds
+// Data for the sound cards
 const soundsData = [
-  { name: "Bird Chirp", src: birdChirp },
-  { name: "Doorbell", src: doorbell },
-  { name: "School Bell", src: schoolBell },
-  { name: "Cash Register", src: cashRegister },
+  { id: 1, name: "Bird Chirp", src: birdChirp },
+  { id: 2, name: "Doorbell", src: doorbell },
+  { id: 3, name: "School Bell", src: schoolBell },
+  { id: 4, name: "Cash Register", src: cashRegister },
 ];
 
-function Place() {
-  const [currentSound, setCurrentSound] = useState(null);
-  const [attempts, setAttempts] = useState(0);
-  const [message, setMessage] = useState("");
-  const [gameStarted, setGameStarted] = useState(false);
+// Function to shuffle sounds
+const shuffleSounds = () => {
+  return [...soundsData, ...soundsData].sort(() => Math.random() - 0.5);
+};
 
-  // Function to start the game with a random sound
-  const startGame = () => {
-    const randomSound =
-      soundsData[Math.floor(Math.random() * soundsData.length)];
-    setCurrentSound(randomSound);
-    setGameStarted(true);
-    setAttempts(0);
-    setMessage("");
-    playSound(randomSound.src);
-  };
+function Place() {
+  const [cards, setCards] = useState(shuffleSounds());
+  const [flippedCards, setFlippedCards] = useState([]);
+  const [matchedCards, setMatchedCards] = useState([]);
+  const [message, setMessage] = useState("");
 
   // Function to play the sound
   const playSound = (soundSrc) => {
@@ -35,42 +30,79 @@ function Place() {
     audio.play();
   };
 
-  // Handle the player's guess
-  const handleGuess = (guess) => {
-    if (currentSound && guess === currentSound.name) {
-      setMessage(`Yehey! You found the ${currentSound.name}!`);
-      setTimeout(() => startGame(), 2000); // Reset the game after a short delay
-    } else {
-      setAttempts(attempts + 1);
-      if (attempts >= 2) {
-        setMessage("Try again! Resetting the game...");
-        setTimeout(() => startGame(), 2000);
-      } else {
-        setMessage(`Wrong! Attempt ${attempts + 1}`);
-      }
+  // Function to handle card click
+  const handleCardClick = (index) => {
+    if (flippedCards.length === 2 || matchedCards.includes(index)) return;
+
+    const newFlipped = [...flippedCards, index];
+    setFlippedCards(newFlipped);
+    playSound(cards[index].src); // Play sound
+
+    if (newFlipped.length === 2) {
+      checkForMatch(newFlipped);
     }
   };
 
+  // Function to check if two flipped cards match
+  const checkForMatch = (newFlipped) => {
+    const [firstIndex, secondIndex] = newFlipped;
+
+    if (cards[firstIndex].id === cards[secondIndex].id) {
+      setMatchedCards((prev) => [...prev, firstIndex, secondIndex]);
+      setMessage(`Yehey! You found the ${cards[firstIndex].name}!`);
+      setTimeout(() => setFlippedCards([]), 1000);
+    } else {
+      setMessage("Not a match, try again!");
+      setTimeout(() => {
+        setFlippedCards([]);
+      }, 1000); // Flip back cards after 1 second
+    }
+  };
+
+  // Function to reset the game
+  const resetGame = () => {
+    setCards(shuffleSounds());
+    setFlippedCards([]);
+    setMatchedCards([]);
+    setMessage("Game reset! Try again!");
+  };
+
+  // Check if all pairs are matched
+  useEffect(() => {
+    if (matchedCards.length === cards.length) {
+      setMessage("Congratulations! You've found all the pairs!");
+    }
+  }, [matchedCards, cards.length]);
+
   return (
-    <div>
-      <h1>How Far You'll Go for the Sounds</h1>
-      {gameStarted ? (
-        <>
-          <p>{message}</p>
-          <button onClick={() => playSound(currentSound.src)}>
-            Play Sound Again
-          </button>
-          <div>
-            {soundsData.map((sound) => (
-              <button key={sound.name} onClick={() => handleGuess(sound.name)}>
-                {sound.name}
-              </button>
-            ))}
+    <div className="memory-game">
+      <h1>Sound Memory Game</h1>
+      <p>{message}</p>
+
+      <div className="game-board">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`card ${
+              flippedCards.includes(index) || matchedCards.includes(index)
+                ? "flipped"
+                : ""
+            } ${flippedCards.length === 2 && !matchedCards.includes(index) ? "not-matched" : ""}`}
+            onClick={() => handleCardClick(index)}
+          >
+            {flippedCards.includes(index) || matchedCards.includes(index) ? (
+              <div className="card-content">{card.name}</div>
+            ) : (
+              <div className="card-back"></div>
+            )}
           </div>
-        </>
-      ) : (
-        <button onClick={startGame}>Start the Game</button>
-      )}
+        ))}
+      </div>
+
+      {/* Floating Reset Button */}
+      <button className="reset-btn" onClick={resetGame}>
+        Reset Game
+      </button>
     </div>
   );
 }
