@@ -5,9 +5,11 @@ const HeartPage = () => {
   return (
     <div>
       <div className="heart__nav">
-        <Link to="/heart/planets">Planets</Link>
+        <Link to="/heart" className="s__link">
+       {/*  <Link to="/heart/planets" className="s__link"> */}
+          Planets
+        </Link>
       </div>
-
       <Outlet />
     </div>
   );

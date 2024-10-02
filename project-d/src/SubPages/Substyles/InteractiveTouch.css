@@ -37,7 +37,6 @@
 .popup-message {
   position: absolute;
   z-index: 10; /* Ensure it's on top */
-  background: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 10px;
   border-radius: 5px;

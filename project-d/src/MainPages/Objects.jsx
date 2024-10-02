@@ -84,7 +84,7 @@ function Object() {
   return (
     <div className="color-sound-memory-game">
       <h1>Color & Sound Memory Game</h1>
-      <p>{message}</p>
+      <p className="text__message">{message}</p>
       <div className="button-container">
         {colors.map((color, index) => (
           <button

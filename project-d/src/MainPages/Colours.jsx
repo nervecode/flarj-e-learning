@@ -33,7 +33,7 @@ const colors = [
 ];
 
 function ColorReviewer() {
-  const navigate = useNavigate();
+  const navCrev = useNavigate();
 
   const [showOptions, setShowOptions] = useState(false);
   const [showColorCodes, setShowColorCodes] = useState(false);
@@ -48,7 +48,7 @@ function ColorReviewer() {
 
   return (
     <div className="color-reviewer-container">
-      <button onClick={() => navigate("/TouchPaint")}>TouchPaint</button>
+      <button className="touch__paint" onClick={() => navCrev("/TouchPaint")}>TouchPaint</button>
       <button className="toggle-btn" onClick={toggleColorCodes}>
         {showColorCodes ? "Hide Color Codes" : "Show Color Codes"}
       </button>
@@ -57,11 +57,11 @@ function ColorReviewer() {
       </button>
       {showOptions && (
         <div className="options-container">
-          <button onClick={() => navigate("/ColorGuessingGame")}>
+          <button onClick={() => navCrev("/ColorGuessingGame")}>
             ColorGuessingGame
           </button>
-          <button onClick={() => navigate("/ColorGuess")}>ColorGuess</button>
-          <button onClick={() => navigate("/ColorCard")}>ColorCard</button>
+          <button onClick={() => navCrev("/ColorGuess")}>ColorGuess</button>
+          <button onClick={() => navCrev("/ColorCard")}>ColorCard</button>
         </div>
       )}
       <h1 className="color-rev-h1">Color Reviewer</h1>

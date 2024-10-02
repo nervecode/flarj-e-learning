@@ -36,6 +36,7 @@ const MaybeShowNavbar = ({ children }) => {
       "/ColorGuess", // Added ColorGuess path
       "/ColorCard", // Added ColorCard path
       "/TouchPaint", // Added TouchPaint path
+      "/SolarSystem", // Added SolarSystem path
     ];
 
     // Check if the current path is in the noNavbarPaths array

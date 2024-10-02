@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./GameStyles/ColorGuess.css";
 
 const colorCategories = {
@@ -20,6 +21,7 @@ const colorCategories = {
 };
 
 function ColorGuess() {
+  const navCg = useNavigate();
   const [currentColor, setCurrentColor] = useState("");
   const [currentCategory, setCurrentCategory] = useState("");
   const [message, setMessage] = useState("");
@@ -50,13 +52,16 @@ function ColorGuess() {
 
   return (
     <div className="color-guessing-game-container">
-      <h1>Guess the Color Category</h1>
+      <button onClick={() => navCg("/star/colours")} className="tp-back-btn">
+        Go Back
+      </button>
+      <h1>Guess the Color Schemes</h1>
       <div className="color-display">
         <div
           className="current-color"
           style={{ backgroundColor: currentColor }}
         ></div>
-        <p>Identify the category of this color</p>
+        <p>Identify the category of this color :</p>
       </div>
       <div className="categories">
         <button onClick={() => checkAnswer("Primary")}>Primary</button>

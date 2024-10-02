@@ -1,52 +1,50 @@
 .color-reviewer-container {
+  height: auto;
+  margin: 30px 0px;
+  padding: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   text-align: center;
-  background-color: #f1eb90;
+  background-color: #f0f7d4;
 }
 
 .color-rev-h1 {
   color: #0f3f46;
 }
 
+.touch__paint {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  padding: 10px 20px;
+}
+
+
 .toggle-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #0f3f46;
-  color: #ffffff;
-  border: none;
   padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  z-index: 1;
+  
 }
 
 .challenge-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0f3f46;
-  color: #ffffff;
-  border: none;
   padding: 15px 30px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1;
 }
 
 .options-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #0f3f46;
+  background-color: #092834;
   color: #ffffff;
   border-radius: 8px;
   padding: 10px;

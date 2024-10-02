@@ -7,34 +7,25 @@
   width: 100vw;
   height: 100vh;
   background-color: #f1eb90;
-  padding: 20px;
   box-sizing: border-box;
-
 }
-.taste-title{
-    color: #0f3f46;
+.taste-title {
+  color: #092834;
 }
 .back-btn {
   position: absolute;
   left: 50px;
   top: 20px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000; /* Ensures the button is above other content */
 }
 .food-list {
   display: flex;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 3rem;
 }
 
 .food-item {
-  background-color: #9fbb73;
+  background-color: #66b032;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -43,18 +34,18 @@
 }
 
 .food-item:hover {
-  background-color: #0f3f46;
+  background-color: #092834;
 }
 
 .taste-message {
   margin-top: 20px;
   font-size: 2.5rem;
-  background-color: #9fbb73;
-  padding: 15px 30px;
+  background-color: #b2d732;
+  padding: 10px 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: fadeInOut 4s ease;
+  animation: fadeInOut 5s ease;
 }
 
 @keyframes fadeInOut {

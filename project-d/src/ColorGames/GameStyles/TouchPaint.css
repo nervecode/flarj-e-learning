@@ -13,11 +13,6 @@
   left: 50px;
   top: 20px;
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   z-index: 1000; /* Ensures the button is above other content */
 }
 

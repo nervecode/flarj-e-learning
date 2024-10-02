@@ -1,5 +1,8 @@
 .memory-game {
   text-align: center;
+  h1 {
+    color: #092834;
+  }
 }
 
 .game-board {

@@ -1,5 +1,5 @@
 .ear-container {
-  background-color: #9fbb73;
+  background-color: #f0f7d4;
   text-align: center;
   height: 100vh;
   display: flex;
@@ -8,19 +8,14 @@
   justify-content: center;
 }
 
-.back-btn {
+/* .back-btn {
   position: absolute;
   top: 20px;
   left: 20px;
-  padding: 10px 20px;
-  background-color: #555;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+} */
 
 .ear-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #092834;
 }

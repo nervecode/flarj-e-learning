@@ -1,6 +1,5 @@
 import Shape from "./Shape";
-
-
+import "./Shpstyles/ShapesPalette.css";
 
 const shapes = [
   { id: "circle", type: "circle", color: "#FF6347" },

@@ -1,8 +1,11 @@
 .app-container {
   text-align: center;
   padding: 20px;
-  background-color: #f1eb90;
-  min-height: 100vh;
+  background-color: #f0f7d4;
+
+  h1 {
+    color: #b2d732;
+  }
 }
 
 .game-area {

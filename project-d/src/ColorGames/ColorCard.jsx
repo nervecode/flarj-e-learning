@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./GameStyles/ColorCard.css";
 
 // Define color sets for each level
@@ -24,6 +25,7 @@ const tertiaryColors = [
 ];
 
 function ColorCard() {
+  const navCC = useNavigate();
   const [level, setLevel] = useState(1); // 1: Primary, 2: Secondary, 3: Tertiary
   const [targetColor, setTargetColor] = useState("");
   const [cards, setCards] = useState([]);
@@ -99,7 +101,9 @@ function ColorCard() {
 
   return (
     <div className="color-card-game-container">
-      
+      <button onClick={() => navCC("/star/colours")} className="tp-back-btn">
+        Go Back
+      </button>
       <h1>Color Card Game - Level {level}</h1>
       <div
         className="target-area"

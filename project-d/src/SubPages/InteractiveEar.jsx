@@ -50,7 +50,7 @@ function InteractiveEar() {
         </svg>
 
         {selectedPart && (
-          <p style={{ fontSize: "3rem", fontWeight: "bold" }}>{selectedPart}</p>
+          <p style={{ fontSize: "3rem", fontWeight: "bold", color: "#66B032" }}>{selectedPart}</p>
         )}
       </div>
     </div>

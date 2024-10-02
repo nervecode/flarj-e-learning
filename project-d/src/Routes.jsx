@@ -27,24 +27,28 @@ import ColorGuessingGame from "./ColorGames/ColorGuessingGame";
 import ColorGuess from "./ColorGames/ColorGuess";
 import ColorCard from "./ColorGames/ColorCard";
 import TouchPaint from "./ColorGames/TouchPaint";
-
+//Planets
+import SolarSystem from "./MainPages/SolarSystem";
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
 
       <Route path="/star" element={<StarPage />}>
-        <Route path="/star/senses" element={<Senses />} />
+        <Route path="/star" element={<Senses />} />
+        {/* <Route path="/star/senses" element={<Senses />} /> */}
         <Route path="/star/colours" element={<Colours />} />
         <Route path="/star/shapes" element={<Shapes />} />
       </Route>
       <Route path="/diamond" element={<DiamondPage />}>
-        <Route path="/diamond/animals" element={<Animals />} />
+        <Route path="/diamond" element={<Animals />} />
+        {/* <Route path="/diamond/animals" element={<Animals />} /> */}
         <Route path="/diamond/place" element={<Place />} />
         <Route path="/diamond/objects" element={<Objects />} />
       </Route>
       <Route path="/heart" element={<HeartPage />}>
-        <Route path="/heart/planets" element={<Planets />} />
+        <Route path="/heart" element={<Planets />} />
+        {/* <Route path="/heart/planets" element={<Planets />} /> */}
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
@@ -58,6 +62,7 @@ const AppRoutes = () => {
       <Route path="/ColorGuess" element={<ColorGuess />} />
       <Route path="/ColorCard" element={<ColorCard />} />
       <Route path="/TouchPaint" element={<TouchPaint />} />
+      <Route path="/SolarSystem" element={<SolarSystem />} />
 
     </Routes>
   );

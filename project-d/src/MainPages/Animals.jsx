@@ -29,27 +29,33 @@ function Animals() {
         <div className="animal-card">
           <img src={catImage} alt="Cat" className="animal-img" />
           <p>Cat</p>
-          <button onClick={() => playSound(catSound)}>Play Cat Sound</button>
+          <button onClick={() => playSound(catSound)} className="animal__link">
+            Cat Sound
+          </button>
         </div>
 
         <div className="animal-card">
           <img src={dogImage} alt="Dog" className="animal-img" />
           <p>Dog</p>
-          <button onClick={() => playSound(dogSound)}>Play Dog Sound</button>
+          <button onClick={() => playSound(dogSound)} className="animal__link">
+            Dog Sound
+          </button>
         </div>
 
         <div className="animal-card">
           <img src={elephantImage} alt="Elephant" className="animal-img" />
           <p>Elephant</p>
           <button onClick={() => playSound(elephantSound)}>
-            Play Elephant Sound
+            Elephant Sound
           </button>
         </div>
 
         <div className="animal-card">
           <img src={lionImage} alt="Lion" className="animal-img" />
           <p>Lion</p>
-          <button onClick={() => playSound(lionSound)}>Play Lion Sound</button>
+          <button onClick={() => playSound(lionSound)} className="animal__link">
+            Lion Sound
+          </button>
         </div>
       </div>
     </div>
