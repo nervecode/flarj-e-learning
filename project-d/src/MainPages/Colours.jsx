@@ -6,28 +6,28 @@ const colors = [
   {
     label: "Primary Colors",
     colors: [
+      { name: "Yellow", hex: "#FFFF00" },
       { name: "Red", hex: "#FF0000" },
-      { name: "Green", hex: "#00FF00" },
       { name: "Blue", hex: "#0000FF" },
     ],
   },
   {
     label: "Secondary Colors",
     colors: [
-      { name: "Yellow", hex: "#FFFF00" },
-      { name: "Magenta", hex: "#FF00FF" },
-      { name: "Cyan", hex: "#00FFFF" },
+      { name: "Green", hex: "#008000" },
+      { name: "Orange", hex: "#FFA500" },
+      { name: "Purple", hex: "#800080" },
     ],
   },
   {
     label: "Tertiary Colors",
     colors: [
-      { name: "Orange", hex: "#FF5733" },
-      { name: "Chartreuse", hex: "#33FF57" },
-      { name: "Dodger Blue", hex: "#33A6FF" },
-      { name: "Deep Pink", hex: "#FF33A6" },
-      { name: "Lime Green", hex: "#A6FF33" },
-      { name: "Steel Blue", hex: "#33A6FF" },
+      { name: "Blue-Green (Teal)", hex: "#008080" },
+      { name: "Yellow-Green (Chartreuse)", hex: "#9ACD32" },
+      { name: "Red-Orange (Vermilion)", hex: "#FF5349" },
+      { name: "Red-Purple (Magenta)", hex: "#E40078" },
+      { name: "Blue-Purple (Violet)", hex: "#8A2BE2" },
+      { name: "Yellow-Orange (Amber)", hex: "#FFAE42" },
     ],
   },
 ];
@@ -48,7 +48,9 @@ function ColorReviewer() {
 
   return (
     <div className="color-reviewer-container">
-      <button className="touch__paint" onClick={() => navCrev("/TouchPaint")}>TouchPaint</button>
+      <button className="touch__paint" onClick={() => navCrev("/TouchPaint")}>
+        TouchPaint
+      </button>
       <button className="toggle-btn" onClick={toggleColorCodes}>
         {showColorCodes ? "Hide Color Codes" : "Show Color Codes"}
       </button>
